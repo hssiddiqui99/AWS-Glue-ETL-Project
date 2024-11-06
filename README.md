@@ -12,17 +12,8 @@ AWS Glue ETL Jobs: Transforming raw data for analysis.
 AWS Glue Data Quality and DataBrew: Enhancing and validating data.
 AWS Glue Triggers and Workflows: Orchestrating ETL processes.
 Data and Schema
-The project involved working with two datasets: Customers and Orders. Below are sample records from each:
+The project involved working with two datasets: Customers and Orders, as seen in the repo files.
 
-Customers
-
-CustomerID	FirstName	LastName	FullName
-293	Catherine	Abel	Catherine Abel
-295	Kim	Abercrombie	Kim Abercrombie
-Orders
-
-SalesOrderID	OrderDate	CustomerID	TotalDue	ProductID	OrderQty
-71782	5/1/2014	293	37497.45	714	3
 These datasets were uploaded to Amazon S3 in the rawData folder, with the folder structure organized by entity (e.g., customers and orders).
 
 Setup and Configuration
@@ -30,18 +21,6 @@ The project setup involved deploying resources using Amazon CloudFormation and s
 
 Creating S3 Buckets and Folders: The S3 bucket contained folders for raw data, processed data, scripts, temporary files, and Athena queries.
 
-markdown
-Copy code
-└── S3-Bucket-Name
-    ├── athena
-    ├── processedData
-    ├── rawData
-    │   ├── customers 
-    │   │   └── customers.csv 
-    │   └── orders
-    │       └── orders.csv 
-    ├── scriptLocation    
-    └── tmpDir
 IAM Roles: Created IAM roles with permissions for AWS Glue, S3, and Athena.
 
 Data Upload: Uploaded the source data files (e.g., customers.csv, orders.csv) into the designated S3 folders.
@@ -81,5 +60,6 @@ In a real-world scenario, additional steps could be taken, such as:
 
 Implementing advanced partitioning for optimizing data storage and retrieval.
 Leveraging Glue’s integration with AWS Lambda for further customizations.
+
 Conclusion
 This project served as a comprehensive hands-on experience with AWS Glue and its related services. It reinforced my understanding of data integration, ETL operations, and workflow automation in a serverless AWS environment, preparing me for further AWS Glue projects and broader data engineering tasks.
